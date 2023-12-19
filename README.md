@@ -1,2 +1,4 @@
 # gpx-converter
- Convertx multiple gpx files into a csv file
+
+Code generated with the assistance of ChatGPT
+Convertx multiple gpx files into a csv file for use in data visualization software.
