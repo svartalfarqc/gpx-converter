@@ -4,11 +4,8 @@ import pandas as pd
 import numpy as np
 from gpx_converter import Converter
 from geopy import distance
-import matplotlib.pyplot as plt
-import plotly.express as px
 import tkinter as tk
 from tkinter import filedialog
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def read_gpx_file(file_path):
     with open(file_path, 'r') as gpx_file:
@@ -76,13 +73,6 @@ def process_gpx_file(file_path, debug = False):
         print('TimeDeltaMax:', gpx_df['time_delta_seconds'].max())
         print('TimeDeltaMin:', gpx_df['time_delta_seconds'].min())
         print('TimeDeltaMean:', gpx_df['time_delta_seconds'].mean())
-
-    # # Plot with plotly.express
-    # fig_2 = px.line(gpx_df, x='time', y=['speed_kilometers_per_hour',
-    #                                       'distance_total_geodesic_kilometers',
-    #                                       'altitude'],
-    #                 template='plotly_dark')
-    # fig_2.show()
 
     return gpx_df
 
